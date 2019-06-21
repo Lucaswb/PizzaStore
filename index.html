@@ -13,37 +13,43 @@
 <body>
   <div class="container">
     <div class="jumbotron">
-      Welcome! to Lucas Pizza store
+      <h2>Welcome!</h2>
+      <p>to Lucas' Pizza store, the best local pizzaria in the greater Northwest Area, located only a few blocks North from Pike's Place</p>
     </div>
     <form id="pizzaSubmissions">
       <div class="row">
+        <p>the base price for a single pizza is $8.00, all subsquent add ons will further increase the cost</p>
+      </div>
+      <div class="row">
         <div class="col-md-3">
-          <p>Pizza Meat</p>
+          <h3>Pizza Meat</h3>
+          <p>($2.00 for the first meat and $1.50 for all subsequent meat toppints)</p>
           <div class="form-group">
-            <input name="meatType" type="checkbox" value="1" id="meat1">
+            <input name="meatType" type="checkbox" value="CanadianBacon" id="meat1">
             <label for="meatTopping">
               Canadian bacon
             </label>
             <br>
-            <input name="meatType" type="checkbox" value="2" id="meat2" >
+            <input name="meatType" type="checkbox" value="Pepperoni" id="meat2" >
             <label for="meatTopping">
               Pepperoni
             </label>
             <br>
-            <input  name="meatType" type="checkbox" value="3" id="meat3">
+            <input  name="meatType" type="checkbox" value="Sausage" id="meat3">
             <label for="meatTopping">
               Sausage
             </label>
             <br>
-            <input name="meatType" type="checkbox" value="4" id="meat3">
+            <input name="meatType" type="checkbox" value="Chicken" id="meat3">
             <label for="meatTopping">
-              Ham
+              Chicken
             </label>
             <br>
           </div>
         </div>
         <div class="col-md-3">
-          <p>Additional Toppings</p>
+          <h3>Additional Toppings</h3>
+          <p>each additional topping will be + $.50</p>
           <div class="form-group">
             <input name="addOns" type="checkbox" value="1" id="additional1">
             <label for="additionalToppings">
@@ -62,42 +68,48 @@
             <br>
             <input name= "addOns" type="checkbox" value="4" id="additional4">
             <label for="additionalTopping">
-
+              carmalized onions
             </label>
             <br>
           </div>
         </div>
 
         <div class="col-md-3">
-          <p>Crust Thickness</p>
+          <h3>Crust Thickness</h3>
           <div class="form-group">
-            <input name="crustType" type="checkbox" value="1" id="Crust1">
+            <input name="crustType" type="radio" value="thin" id="Crust1">
             <label for="Crust">
               Thin Crust
             </label>
             <br>
-            <input name="crustType" type="checkbox" value="2" id="Crust2" >
+            <input name="crustType" type="radio" value="hand" id="Crust2" >
             <label for="Crust">
-              Hand Tossed
+              Hand Tossed (+ $1.50)
             </label>
             <br>
-            <input name="crustType" type="checkbox" value="3" id="Crust3">
+            <input name="crustType" type="radio" value="pan" id="Crust3">
             <label for="Crust">
-              Pan
+              Pan (+ $2.00)
             </label>
             <br>
           </div>
           <br>
-          <p>Sauce</p>
+          <h3>Sauce</h3>
+          <p>select one of our premium sauces_</p>
           <div class="form-group">
-            <input name="sauceType" type="checkbox" value="1" id="Sauce1">
+            <input name="sauceType" type="radio" value="tomato" id="Sauce1">
             <label for="Sauce">
               Tomato Sauce
             </label>
             <br>
-            <input name="sauceType" type="checkbox" value="2" id="Sauce2" >
+            <input name="sauceType" type="radio" value="white" id="Sauce2" >
             <label for="Sauce">
-              White Sauce
+              White Sauce (+ $.50)
+            </label>
+            <br>
+            <input name="sauceType" type="radio" value="barbecue" id="Sauce3" >
+            <label for="Sauce">
+              Barbecue (+ $.50)
             </label>
             <br>
           </div>
