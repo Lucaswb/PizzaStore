@@ -3,6 +3,7 @@
 
 //this will create a generic customer profile for the order and allow the user to add additional pizzas
 function Customer(){
+  this.pizzaNumber = 0
   this.pizzaOrder = {}, // this will have the pizza name as the key and the cost as the
   this.firstName = "",
   this.lastName = "",
@@ -14,9 +15,28 @@ function Customer(){
   }
 }
 
-Customer.prototype.addPizza = function(Pizza){
-  this.pizzaOrder[Pizza.getName()] = Pizza.getCost()
+
+
+Customer.prototype.addPizza = function(pizza){
+  pizza.number = this.pizzaNumber;
+  this.pizzaOrder[this.pizzaNumber] = Pizza;
+  this.pizzaNumber++;
 // this will add the pizza object and price to the customer order
+}
+Customer.prototype.findPizza = function(id) {
+  var searchKeys = Object.keys(this.pizzaOrder)
+  searchKeys.forEach(function(key){
+    if (key===id){
+      return this.pizzaOrder[id]
+    }
+  });
+  return false;
+}
+//This will delete a pizza from the pizza order
+Customer.prototype.removePizza = function(id) {
+  debugger;
+  console.log(delete this.pizzaOrder.id)
+  console.log(this.pizzaOrder.id)
 }
 
 
@@ -26,6 +46,7 @@ function Pizza(meatInput, topInput, crustInput, sauceInput) {
   this.topInput = topInput,
   this.crustInput = crustInput,
   this.sauceInput = sauceInput
+  this.number;
 }
 
 
@@ -90,12 +111,15 @@ Pizza.prototype.getName = function(){
   return pizzaName
 
 }
+//test purposes
+
+
 
 
 
 //User InterFace Logic
 $(document).ready(function(){
-  var customer = new Customer();
+  var customer1 = new Customer();
   $("form#pizzaSubmissions").submit(function(event){
     event.preventDefault();
     var meatTypes = [];
@@ -114,7 +138,8 @@ $(document).ready(function(){
     var sauceType = $("input:radio[name=sauceType]:checked").val();
     // this will define all the input settings for the original order of pizza
     var pizza = new Pizza(meatTypes, topTypes, crustType, sauceType)
-    customer.addPizza();
+
+    customer1.addPizza(pizza);
     $("form#customer").show();
     $("button#anotherPizza").show();
     $("#proceedCheckout").hide();
@@ -122,10 +147,14 @@ $(document).ready(function(){
   // this will add to the customer checkout and add the information to the customer checkout.
   $("form#customer").submit(function(event){
     event.preventDefault();
-    customer.firstName = $("#firstName").val();
-    customer.lastName= $("#lastName").val();
-    customer.email= $("#email").val();
-    customer.street= $("#street").val();
-    customer.state = $("#city").val();
+    customer1.firstName = $("#firstName").val();
+    customer1.lastName= $("#lastName").val();
+    customer1.email= $("#email").val();
+    customer1.street= $("#street").val();
+    customer1.state = $("#city").val();
+    console.log(customer1.pizzaOrder)
+    customer1.removePizza(1);
+    console.log(customer1.pizzaOrder[1].meatInput)
+    console.log(customer1.pizzaOrder[2].meatInput)
   });
 });
