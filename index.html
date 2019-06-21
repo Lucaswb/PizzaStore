@@ -46,6 +46,25 @@
             </label>
             <br>
           </div>
+          <h3>Crust Thickness</h3>
+          <div class="form-group">
+            <input name="crustType" type="radio" value="thin" id="Crust1">
+            <label for="Crust">
+              Thin Crust
+            </label>
+            <br>
+            <input name="crustType" type="radio" value="hand" id="Crust2" >
+            <label for="Crust">
+              Hand Tossed (+ $1.50)
+            </label>
+            <br>
+            <input name="crustType" type="radio" value="pan" id="Crust3">
+            <label for="Crust">
+              Stuffed (+ $2.00)
+            </label>
+            <br>
+          </div>
+          <br>
         </div>
         <div class="col-md-3">
           <h3>Additional Toppings</h3>
@@ -72,28 +91,6 @@
             </label>
             <br>
           </div>
-        </div>
-
-        <div class="col-md-3">
-          <h3>Crust Thickness</h3>
-          <div class="form-group">
-            <input name="crustType" type="radio" value="thin" id="Crust1">
-            <label for="Crust">
-              Thin Crust
-            </label>
-            <br>
-            <input name="crustType" type="radio" value="hand" id="Crust2" >
-            <label for="Crust">
-              Hand Tossed (+ $1.50)
-            </label>
-            <br>
-            <input name="crustType" type="radio" value="pan" id="Crust3">
-            <label for="Crust">
-              Stuffed (+ $2.00)
-            </label>
-            <br>
-          </div>
-          <br>
           <h3>Sauce</h3>
           <p>select one of our premium sauces_</p>
           <div class="form-group">
@@ -114,10 +111,38 @@
             <br>
           </div>
         </div>
+
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-3">
+        </div>
       </div>
-      <div class="row">
-        <button id="checkout" type="submit" class="btn-info" name="inputs">proceed to checkout</button>
+      <button id="proceedCheckout" type="submit" class="btn-info" name="inputs">proceed to checkout</button>
+      <button id="anotherPizza" type="submit" class="btn-info" name="inputs">add another pizza</button>
+
+    </form>
+
+    <form id="customer">
+      <h2>Checkout</h2>
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input id="firstName" class = "form-control" type="text">
       </div>
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input id="lastName" class = "form-control" type="text">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" class = "form-control" type="text">
+      </div>
+      <div class="form-group">
+        <label for="street">Address</label>
+        <input id="street" class = "form-control" type="text">
+        <label for="city"></label>
+        <input id="cit" class = "form-control" type="text">
+      </div>
+      <button id="checkout" type="submit" class="btn-info" name="inputs">checkout</button>
     </form>
   </div>
 </body>
