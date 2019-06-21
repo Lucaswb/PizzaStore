@@ -8,69 +8,103 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script src="js/scripts.js"></script>
-  <title>ß</title>
+  <title></title>
 </head>
 <body>
   <div class="container">
     <div class="jumbotron">
       Welcome! to Lucas Pizza store
     </div>
-    <form class="pizza submissions">
+    <form id="pizzaSubmissions">
       <div class="row">
         <div class="col-md-3">
           <p>Pizza Meat</p>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="1" id="meat1">
-            <label class="form-check-label" for="meatTopping">
+          <div class="form-group">
+            <input name="meatType" type="checkbox" value="1" id="meat1">
+            <label for="meatTopping">
               Canadian bacon
             </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="1" id="meat2" disabled>
-            <label class="form-check-label" for="meatTopping">
-              pepperoni
+            <br>
+            <input name="meatType" type="checkbox" value="2" id="meat2" >
+            <label for="meatTopping">
+              Pepperoni
             </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="1" id="meat3">
-            <label class="form-check-label" for="meatTopping">
+            <br>
+            <input  name="meatType" type="checkbox" value="3" id="meat3">
+            <label for="meatTopping">
               Sausage
             </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="1" id="meat3">
-            <label class="form-check-label" for="meatTopping">
-              Sausage
+            <br>
+            <input name="meatType" type="checkbox" value="4" id="meat3">
+            <label for="meatTopping">
+              Ham
             </label>
+            <br>
           </div>
         </div>
         <div class="col-md-3">
-          <p>Pizza Meat</p>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="1" id="additional1">
-            <label class="form-check-label" for="additionalToppings">
-
+          <p>Additional Toppings</p>
+          <div class="form-group">
+            <input name="addOns" type="checkbox" value="1" id="additional1">
+            <label for="additionalToppings">
+              Olives
             </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="1" id="additional2" disabled>
-            <label class="form-check-label" for="additionalTopping">
-              pepperoni
+            <br>
+            <input name= "addOns" type="checkbox" value="2" id="additional2" >
+            <label for="additionalTopping">
+              Peppers
             </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="1" id="additional3">
-            <label class="form-check-label" for="additionalTopping">
+            <br>
+            <input name= "addOns" type="checkbox" value="3" id="additional3">
+            <label for="additionalTopping">
               Sausage
             </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="1" id="additional3">
-            <label class="form-check-label" for="additionalTopping">
+            <br>
+            <input name= "addOns" type="checkbox" value="4" id="additional4">
+            <label for="additionalTopping">
               Sausage
             </label>
+            <br>
           </div>
         </div>
+
+        <div class="col-md-3">
+          <p>Crust Thickness</p>
+          <div class="form-group">
+            <input name="crustType" type="checkbox" value="1" id="Crust1">
+            <label for="Crust">
+              Thin Crust
+            </label>
+            <br>
+            <input name="crustType" type="checkbox" value="2" id="Crust2" >
+            <label for="Crust">
+              Hand Tossed
+            </label>
+            <br>
+            <input name="crustType" type="checkbox" value="3" id="Crust3">
+            <label for="Crust">
+              Pan
+            </label>
+            <br>
+          </div>
+          <br>
+          <p>Sauce</p>
+          <div class="form-group">
+            <input name="sauceType" type="checkbox" value="1" id="Sauce1">
+            <label for="Sauce">
+              Tomato Sauce
+            </label>
+            <br>
+            <input name="sauceType" type="checkbox" value="2" id="Sauce2" >
+            <label for="Sauce">
+              White Sauce
+            </label>
+            <br>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <button id="checkout" type="submit" class="btn-info" name="inputs">proceed to checkout</button>
       </div>
     </form>
   </div>
